@@ -89,7 +89,7 @@ Also identify the heading and paragraph for markdown properly and make headings 
 
     try {
       const response = await genAI.models.generateContent({
-        model: "gemini-3-flash-preview",
+        model: process.env.GEMINI_MODEL,
         contents: message,
         config: { systemInstruction: RESUME_CONTEXT }
       });
